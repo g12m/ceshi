@@ -1,0 +1,209 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*顶部导航背景滚动颜色与阴影 */
+#header.mini { background: #fff; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); }
+/*顶部导航背景默认色IPAD */
+
+.lowB #header { background: #FFF; }
+#header ul li.navitem a.active, #header ul li.navitem:hover a { color: #fff; background: #e73828; width: 115px;}
+#indexPage #mpartner .slider_control a:hover { background-color: #424242 }
+#pages a.active, #pages a:hover { background: #FFF; color: #838383; }
+.bx-wrapper .bx-controls-direction a:hover { background-color: #4E4E4E }
+#header ul li.navitem a { color: #eceaea; padding: 2px 0 4px; background-color: transparent; border-radius: 3px; display: block; font-family: "NeoSansStd-Regular", "微软雅黑"; text-transform: uppercase; font-size: 14px; width: 115px; text-align: center; }
+/*导航下拉菜单 */
+
+
+#header ul li.navitem ul.subnav li a { padding: 5px 30px; width: 170px; height: 20px; line-height: 20px; background: rgba(255, 255, 255, 1) none repeat scroll 0% 0%; display: block; font-size: 12px; transition: all 0.2s ease-out 0s; color: #999; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); border-radius: 0px; }
+#header ul li.navitem ul.subnav li a:hover { text-indent: 10px; background: #e73828; color: #fff; }
+#header ul li.navitem ul.subnav { border-top: 3px solid #7B7B7B; border-radius: 0px; width: 230px;}
+#header ul li.navitem ul.subnav li { border-bottom: 1px solid #FFF; }
+/*幻灯左右切换按钮 */
+
+.bx-wrapper .bx-controls-direction a { background: rgba(0,0,0,.2); border-radius: 3px; }
+/*副标题 */
+
+.content .header p.subtitle { color: #787878; font-size: 12px; font-family: "NeoSansStd-Light"; letter-spacing: 2px; }
+/*首页案例背景颜色 */
+
+#indexPage #mproject { background-color: #FFF; }
+#category a { border-radius: 4px;
+    padding: 6px 0px 5px;
+    min-width: 220px;
+    margin-right: 10px;
+    transition: all 0.3s ease-out 0s;
+    color: #999;
+    border: 1px solid #EDEDED;}
+#category a.active, #category a:hover { background: #e73828; color: #fff; border: 1px solid #e73828; }
+.nobanner #header { background: #1E1E1E; }
+/*案例*/
+#projectlist .projectitem { margin-right: 1%; margin-bottom: 20px; width: 19%; }
+#projectlist .projectitem .project_info p.title { color: transparent; padding: 0 0 0 20px; text-align: left; font-size: 18px; font-family: "NeoSansStd-Regular", "微软雅黑"; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; z-index: 1; position: relative; }
+#projectlist .projectitem .project_info p.subtitle { text-align: left; font-family: "NeoSansStd-Light", "微软雅黑"; z-index: 1; position: relative; }
+#projectlist .projectitem a:hover .project_info p.title { color: #FFF; margin-top: -70px; }
+#projectlist .wrapper { margin-left: 1%; margin-right: auto; }
+.npagePage #projectlist .wrapper { width: 80%; margin: 0px auto; }
+#projectlist .projectitem .project_info div { position: absolute; height: 100px; width: 100%; bottom: -100px; margin-top: 0; top: auto; }
+#projectlist .projectitem a:hover .project_info p.subtitle { margin-top: 4px; color: #fff; }
+#mproject .content .header { padding-top: 61px; padding-bottom: 80px; }
+#projectlist .projectitem .project_info div.line1 { width: 100%; height: 0px; background: rgba(195,45,30,.8); transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; margin: 0px 0px 100px; }
+#projectlist .projectitem a:hover .project_info div.line1 { height: 90px; }
+#projectlist, #projectmore { margin: 0px auto; }
+#projectmore { width: 180px; line-height: 150px; text-align: center; font-size: 12px; display: block; background: #E73828; text-indent: 0px; position: absolute; top: 143px; height: 24px; border-radius: 5px; line-height: 24px; left: 50%; margin-left: -94px; color: #fff; font-family: "NeoSansStd-Regular"; }
+#projectmore:hover { width: 220px; height: 24px; font-size: 12px; line-height: 24px; text-indent: 0px; background: #333; margin-left: -116px; }
+#mproject .content .header { padding-bottom: 112px; }
+/*首页背景不平铺
+#indexPage .module {background-size:auto;}*/
+/*首页背景不加透明蒙层 */
+#indexPage #mproject .bgmask, #indexPage #mnews .bgmask, #indexPage #mservice .bgmask, #indexPage #mpage .bgmask { background-color: rgba(255, 255, 255, 0); }
+/*首页服务背景层 */
+
+#contactform p textarea.inputtxt { height: 80px; }
+#contactform p .inputtxt { border: none; margin-bottom: 10px; background: none; width: 0; height: 0; line-height: 0; padding: 0; color: transparent; }
+#indexPage #mteam .description { margin: -20px 0px; color: #848484; }
+.content .header p.title { font-family: "NeoSansStd-Medium"; letter-spacing: 5px; margin-left: 10px; }
+#footer { background: #151214; }
+#indexPage #mteam .slider_control a i:hover { color: #e73828; }
+.teamitem a div.wrap span { background: #e73828; }
+#contactinfo div a { background: #484848; }
+#footer p { text-align: center; color: #595959;}
+.teamitem a div.wrap { background: #171717; }
+/*首页幻灯高度*/
+
+#indexPage #mslider { height: 400px; }
+bx-wrapper .bx-pager.bx-default-pager a { width: 20px; height: 4px; margin: 0px 5px; border-radius: 6px; border: 1px solid #C8C8C8; }
+/*首页全屏*/
+
+#indexPage #mslider { height: 0 }
+#header .content { padding-left: 40px; padding-right: 40px; min-width: 1366px}
+#indexPage #mslider ul li p.title { text-transform: uppercase; font-size: 80px; line-height: 80px; height: 80px; }
+#indexPage #mslider ul li p.subtitle { color: #8C8C8C; width: 600px; margin: 10px auto; }
+/*#indexPage #mslider ul li div { background-image: url(""); }*/
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto { bottom: 0px; background-color: rgba(0,0,0,.6); }
+#shares a#gotop { margin-top: 1px; background-color: rgba(0, 0, 0, 0.2); transition: all 0.3s ease-out 0s; }
+#shares a#gotop:hover { background-color: rgba(0, 0, 0, 0.8); }
+#shares a#sweibo { background-color: rgba(36, 24, 26, 0.5); transition: all 0.3s ease-out 0s; }
+#shares a#sweibo:hover { background: #EA493C; }
+#shares a#sweixin { background-color: rgba(36, 24, 26, 0.3); transition: all 0.3s ease-out 0s; }
+#shares a#sweixin:hover { background: #24B727; }
+.bx-wrapper .bx-pager.bx-default-pager a { width: 50px; height: 1px; }
+#indexPage #mslider ul li p { color: #e73828; }
+/*新导航*/
+
+#header .content { padding-left: 0px; padding-right: 0px; }
+#header ul#nav { float: right; border-left: 1px solid transparent;  transition: all 0.3s ease-out 0s;     padding-right: 130px;}
+#header.mini ul#nav { padding: 0px 20px 0px 20px;  padding-right: 110px;}
+#header.mini { background: #000; padding-top: 0px; }
+#header ul li.navitem { padding: 26px 3px 10px 3px; height: auto; line-height: 16px; }
+#header.mini ul li.navitem { padding: 17px 0.5px; }
+#header { padding-top: 0px; border-bottom: 0px solid transparent; }
+#header #logo { padding: 20px 140px 20px 40px; border-right: 1px solid transparent; transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; background: url(../images/logobj.png)no-repeat -400px 0px;}
+#header #logo img { transform: scale(1, 1); transition: all 0.3s ease-out 0s; margin-top: -10px; margin-left: -10px;}
+#header.mini #logo { padding: 8px 140px 8px 20px; background: url(../../images/default/logobj.png)no-repeat 0px 0px;}
+#header.mini #logo img { transform: scale(0.8, 0.8); margin-left: -40px; margin-top: -10px;}
+/*在线咨询*/
+
+#olx_head { background: #1D1D1D; border-radius: 0px; color: #e73828; }
+#online_lx { border-radius: 0px; }
+#olx_qq li a:hover i { color: #e73828; }
+#olx_qq li a:hover { padding: 18px 30px; }
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus { border: 1px solid transparent; background-color: transparent; }
+.bx-wrapper .bx-pager.bx-default-pager a { border: 1px solid transparent; margin: 0px 0px; border-radius: 0px; background: transparent none repeat scroll 0% 0%; }
+/*服务*/
+
+#indexPage #mservice .fw { width: auto; }
+#indexPage #mservice .slider_control { width: 0px; height: auto; }
+#indexPage #mservice .slider_wrapper { width: 100%; height: auto; }
+#indexPage #mservice .slider_wrapper .slider { width: 100%; margin-left: 1%; }
+.serviceitem a { display: block; height: 120px; margin: 20px auto 20px; transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+.serviceitem:hover { background-color: #37292f; padding: 0 0; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); border-radius: 20px; }
+.serviceitem { height: 300px; margin-right: 1%; width: 32%; margin-top: 20px; transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; background-color: transparent; border-radius: 20px; }
+.serviceitem div p.description { color: #c1b6b6; height: 50px; overflow: hidden; width: 70%; margin-top: 10px; padding: 0 15%; transition: all 0.2s ease-out 0s;font-size: 13.5px; }
+.serviceitem div p.title { font-size: 16px; width: 70%; padding: 0 15%; color: #eeefef; font-family: "NeoSansStd-Regular", "微软雅黑"; }
+#indexPage #mservice .content .header p.title { color: transparent; font-size: 0px; }
+#indexPage #mservice .content .header p.subtitle { color: transparent; font-size: 0px; line-height: 0px; }
+#indexPage #mservice .content .header { padding-top: 0px; padding-bottom: 0px; }
+#indexPage #mservice { background-color: #291a21; height: 340px }
+.serviceitem:hover .title { color: #eeefef; }
+.serviceitem:hover div p.description { color: #e6d9d9; }
+/*首页关于我们*/
+
+#indexPage #mpage .slider_wrapper li .fimg { height: 1218px; }
+/*首页联系*/
+
+#indexPage #mcontact .content { width: 1180px; }
+#contactinfo { padding: 140px 0 0 136px; background-image: url("../../images/default/logo.png"); background-repeat: no-repeat;   background-position: 8px 10px;}
+#contactform.fr { padding: 0px 454px 0 0; background-image: url("../../images/default/app.png"); background-repeat: no-repeat; height: 408px; }
+#indexPage #mcontact { background-color: #23181d;}
+#contactform p .inputsub { background-color: transparent; margin-top: 0; padding: 0; color: transparent; font-size: 0; }
+#contactform .inputtxt.active { border-color: #424242 }
+#contactinfo h3 { color: #e73828; }
+/*首页新闻*/
+
+#indexPage #mnews { height: 1200px; }
+#newslist .newstitem:hover { background: #291b20; }
+#newslist .newstitem { background-color: #eeefef; height: 140px; }
+#mnews .content .header { padding-bottom: 120px; }
+#newslist .newscontent { padding-top: 32px; }
+#newslist .newsbody .description { margin-top: 16px; width: 510px; font-size: 12px; }
+#newslist .newsinfo .md { color: #B1B1B1; }
+#indexPage a.more { width: 180px; border-color: #E73828; text-align: center; font-size: 12px; background: #E73828; position: absolute; top: 92px; height: 24px; border-radius: 5px; line-height: 24px; left: 50%; margin-left: -94px; color: #FFF; font-family: "NeoSansStd-Regular"; text-indent: 0px; }
+#indexPage a.more:hover { border-color: #333; text-indent: 0px; background: #333; width: 220px; margin-left: -116px; }
+/*首页团队*/
+
+#indexPage #mteam { background-color: #291A21; height: 850px; }
+#mteam .content .header { padding-top: 100px; padding-bottom: 50px; }
+/*服务内页*/
+
+
+
+#servicelist .serviceitem { height: 360px; margin-right: 1%; width: 32%; margin-top: 20px; transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; background-color: #f8f8f8; margin-bottom: 0px; }
+#servicelist .serviceitem:hover { background-color: #fff; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); }
+#servicelist .serviceitem:hover .title { color: #151515; }
+#servicelist .serviceitem div p.description { color: #7B7B7B; }
+#servicelist .serviceitem div p.title { color: #6C6C6C; }
+#servicelist { width: 100%; }
+#servicelist .wrap { width: 100%; margin-left: 1%; }
+/*项目详情*/
+
+#projectinfo { width: 340px; float: right; padding: 0px 50px; margin-left: 0px; }
+#projectwrap.fw { width: 100%; }
+#projectimages li img { display: block; float: none; margin: 0px auto; max-width: 100%; }
+#projectbody { max-width: 100%; margin: 0px auto; width: calc(100% - 490px); float: right; padding: 0 50px 0 0; }
+#projectimages li img { display: block; float: none; max-width: 100%; margin: 0px auto; }
+#projectimages li { margin-bottom: 0px; }
+#projectinfo .description a { background: #2D2D2D; border-radius: 3px; padding: 6px 40px;}
+#projectinfo .description a:hover { background: #e73828; color: #fff; }
+#sitecontent .npagePage .content #plheader.header p.title { color: transparent; font-size: 0; }
+#sitecontent .npagePage .content #plheader.header p.subtitle { color: transparent; font-size: 0; }
+#plheader { padding-bottom: 20px; padding-top: 0px; }
+.teamitem .teaminfo { text-align: left; }
+#indexPage #mslider ul li { background-color: #000; }
+.npagePage #projectlist .projectitem { margin-bottom: 100px; }
+.npagePage #projectlist .projectitem .project_info p.title { color: #717171; padding: 10px 0px 0px 20px; }
+.npagePage #projectlist .projectitem .project_info p.subtitle { margin-top: 0px; color: #8C8C8C; font-size: 12px; }
+#indexPage a.more:hover i { color: transparent; text-indent: -10px; }
+/*首页团队*/
+
+#mteam .fw { margin: 0px auto; width: 100%; }
+#indexPage #mteam .header img { float: left; margin: -100px 0px 0 0; border-radius: 0px; width: 68%; height: auto; }
+#indexPage #mteam .header p.title {margin: 140px 0 0 0; color: #F8F8F8; }
+/*#indexPage #mteam .header p.subtitle {margin-right: 100px;}*/
+.module-slider .description { width: auto; height: auto; font-size: 0.8vw; padding-left: 20px}
+#indexPage #mteam .slider_wrapper { width: auto; height: auto; }
+#indexPage #mteam .slider_control { height: 40px; position: absolute; z-index: 9; right: -4px; width: 100px; margin: 290px 0; }
+#indexPage #mteam .slider_control a i { color: #fff; background-color: rgba(38, 24, 24, 0.5); padding: 16px 20px; border-radius: 5px; }
+#indexPage #mteam .slider_control.prev { left: -4px; }
+#indexPage #mteam .slider_control.right { right: -4px }
+
+
+.npagePage .content .header p.title {color: transparent;font-size: 0;}
+.npagePage .content .header p.subtitle {color: transparent;font-size: 0;}
+.npagePage .content .header {padding-top: 61px;padding-bottom: 0px;}
+
+#newsPage #newslist .newstitem {background-color: #fff;}
+#newsPage #newslist .newstitem:hover {background: #291b20;}
+#projectih .header p.title {color: #444;font-size: 26px; margin-left: 0px; letter-spacing: 0px;}
+#projectih .header p.subtitle {color: #787878;font-size: 12px;}
+#indexPage a.more i {font-size:0;}
+
+#indexPage #category {display: none;}

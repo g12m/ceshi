@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<block name="head">
+    <include file="public@head"/>
+    <!--<script type="text/javascript" src="__TMPL__/public/assets/js/default/youziku.api.min.js"></script>--> <!--<script type="text/javascript">--> <!--$youziku.load("body", "706db2e8cc62442c9060a3f6e3f8fd75", "Source-Han-Sans-Medium");--> <!--$youziku.draw();--> <!--</script>-->
+</block>
+<block name="content">
+  <body>
+    <div id="header">
+                <div class="content">
+                   <a href="/" id="logo">
+                     <img src="__TMPL__/public/assets/picture/1451541095123.png" height="60" /> </a>
+                <ul id="nav" style="margin-right:200px;">
+                  <li class="navitem">
+                    <a href="/" target="_self">首页<strong class="nav_ico"></strong></a>
+                  </li>
+
+
+                     <php>
+	$where=['parent_id'=>0];
+</php>
+<portal:categories where="$where" order="list_order DESC" item="vo">
+  <li  class="navitem">
+    <if $vo['id']=='6'>
+<a class="bg"  href="{:cmf_url('portal/page/index',array('id'=>1))}" target="">{$vo.name|default=''}<strong class="nav_ico"></strong><i class="fa fa-angle-down"></i></a>
+      <else/>
+    <a class="bg"  href="{:cmf_url('portal/list/index',array('id'=>$vo.id))}" target="">{$vo.name|default=''}<strong class="nav_ico"></strong><i class="fa fa-angle-down"></i></a>
+  </if>
+    <ul  class="subnav">
+      <portal:allsubCategories categoryId="$vo['id']" item="v">
+
+      <li>
+        <a href="{:cmf_url('portal/list/index',array('id'=>$v.id))}" target="">{$v.name|default=''}<i class="fa fa-angle-right"></i></a>
+      </li>
+      </portal:allsubCategories>
+    </ul>
+
+  </li>
+</portal:categories>
+
+
+                      </ul>
+                      <!-- 推荐位 -->
+                      <!-- <portal:position positionId="1" order="listorder DESC">
+                        {$vo.post_title} <img src="{:cmf_get_image_url($vo.thumbnail)}">
+                     </portal:position> -->
+                      <!-- 广告位 -->
+                      <!-- <portal:poster posterId="1">
+
+                     </portal:position> -->
+                                <!-- 判断是否登陆 -->
+                              <if cmf_is_user_login()>
+                                <div class="header-login fr" style="margin-top:14px;margin-right:-800px;" >
+                                  <a href="/user/register/index.html" class="tx-btn">{$user['mobile']}</a>
+                                  <a href="{:url('user/index/logout')}" class="tx-btn bg-red js-ajax-delete">退出</a>
+                                  </div>
+
+                                <else/>
+                                <div class="header-login fr" style="margin-top:14px;margin-right:-800px;" >
+                                  <a href="/user/register/index.html" class="tx-btn">注册</a>
+                                  <a href="/user/login/index.html" class="tx-btn bg-red">登陆</a>
+                                  </div>
+                                  </if>
+                               </div>
+                                  <div class="clear">
+                                  </div>
+
+                                 <style>
+                                    .tx-btn{
+                                      display: inline-block;
+                                      height: 30px;
+                                      line-height: 30px;
+                                      padding: 0 30px;
+                                      background-color: #009688;
+                                      color: #fff;
+                                      white-space: nowrap;
+                                      text-align: center;
+                                      font-size: 1.2rem;
+                                      border: none;
+                                      border-radius: 2px;
+                                      cursor: pointer;
+                                      opacity: .9;
+                                    }
+                                    .bg-red{
+                                      background-color: #FF5722;
+                                    }
+                                 </style>
+                                 <a id="headSHBtn" href="javascript:;">X</a>
+                               </div>
+
+
+                   <script>
+                  var $_GET = (function(){
+                      var url = window.document.location.href.toString();
+                      var u = url.split("?");
+                      if(typeof(u[1]) == "string"){
+                          u = u[1].split("&");
+                          var get = {};
+                          for(var i in u){
+                              var j = u[i].split("=");
+                              get[j[0]] = j[1];
+                          }
+                          return get;
+                      } else {
+                          return {};
+                      }
+                  })();
+                </script>
+                   <style>
+                    @media only screen and (max-width: 1600px) { p .title{ font-size: 28px; }}
+                    @media only screen and (max-width: 1200px) { p .title{ font-size: 15px; }}
+                  </style>
+                  <div id="sitecontent">
+   <div id="indexPage">
+      <div id="mslider">
+        <script type="text/javascript">
+        $(function(){$("#mslider li video").each(function(index, element) {element.play();});})
+         </script>
+         <ul class="slider" data-options-auto="1" data-options-mode="0" data-options-pause="4">
+          <slides id="1">
+                <li name="bannerImg"  style="background-image:url({:cmf_get_image_url($vo.image)}) ">
+                  <div id="tempImage_1">
+                  </div>
+                   <div class="mask">
+                   </div> <!--<a target="_blank" href="">-->
+                     <div>
+                     <p class="title ellipsis"></p>
+                    </div>
+                    <div class="sliderArrow fa fa-angle-down">
+                    </div> <!--</a>-->
+                </li>
+          </slides>
+
+          </ul>
+
+                          </div>
+                          <div id="mservice" class="module" data-infiniteloop="">
+                            <div class="bgmask"></div>
+                            <div class="content fw">
+                               <div class="header wow slideInUp" data-wow-delay=".1s">
+                                  <p class="title">TECHNOLOGY</p> </div>
+                                  <div class="module-slider">
+                                    <div class="slider_control prev fl"></div>
+                                    <div class="slider_control next fr"></div>
+                                     <div class="slider_wrapper">
+                                        <ul class="slider">
+                                           <li class="serviceitem wow slideInLeft" data-wow-delay=".1s">
+                                             <a href="/page/index/id/52.html" target="_blank"><span class="kuangf"></span>
+                                               <img src="__TMPL__/public/assets/picture/research.png" width="320" height="120" /></a> <div> <p class="title">系统设计与创新领导力中心</p>
+                                                  <p class="description">四大模块课程+智库，以设计引领潮流，驱动创新</p>
+                                                 </div>
+                                               </li>
+                                                 <li class="serviceitem wow fadeInUp" data-wow-delay=".1s"><a href="/page/index/id/49.html" target="_blank"><span class="kuangf"></span>
+                                                   <img src="__TMPL__/public/assets/picture/talent.png" width="320" height="120" /></a>
+                                                   <div> <p class="title">联创中心</p>
+                                                     <p class="description">立足上海，面向全球的系统设计与创新生态平台</p> </div></li>
+                                                      <li class="serviceitem wow slideInRight" data-wow-delay=".1s">
+                                                        <a href="/page/index/id/50.html" target="_blank"><span class="kuangf"></span>
+                                                          <img src="__TMPL__/public/assets/picture/creative.png" width="320" height="120" /></a>
+                                                           <div>
+                                                              <p class="title">企业联盟</p> <p class="description">八大服务体系，助力企业发展成长</p>
+                                                            </div>
+                                                          </li>
+                                                          </ul>
+                                                         </div>
+                                                        </div>
+                                                      </div>
+                                                    </div> <!--<div id="mteam" class="module ">--> <!--<div class="bgmask">--> <!--</div>--> <!--<div class="content fw">--> <!--<div class="header" style="--> <!--padding-top: 10px;--> <!--height: 100px;--> <!--background-color: #fff;--> <!--visibility: visible;--> <!--animation-delay: 0.5s;--> <!--width: 100%;--> <!--background-color: rgb(245, 245, 245);--> <!--margin: 0px auto;--> <!--text-align: center;--> <!--height: 100px;--> <!--color: rgb(68, 68, 68);--> <!--padding-top: 45px;--> <!--">--> <!--<p class="title" style="--> <!--margin: 0;--> <!--background-color: rgb(245, 245, 245);--> <!--color: #444;--> <!--font-size: 34px;--> <!--padding-bottom: 6px;--> <!--padding-top: 15px;--> <!--">研究院科研方向</p>--> <!--<p class="subtitle" style="--> <!--background-color: rgb(245, 245, 245);--> <!--margin: 0;--> <!--color: #787878;--> <!--font-size: 12px;--> <!--">SIIDI Research Directions</p>--> <!--</div>--> <!--<div class="module-slider">--> <!--<div class="slider_control prev fl">--> <!--</div>--> <!--<div class="slider_control next fr">--> <!--</div>--> <!--<div class="slider_wrapper">--> <!--<ul class="slider">--> <!--<li>--> <!--<div class="header wow slideInUp" data-wow-delay=".2s">--> <!--<a href="###">--> <!--<img src="__TMPL__/public/assets/picture/14666699666.jpg" style="width: 1080px;height: 655px;" />--> <!--<p class="title">--> <!--城镇都市品质生活内容--> <!--</p>--> <!--<p class="subtitle">--> <!--SIIDI Research Directions--> <!--</p>--> <!--<div class="line1">--> <!--</div>--> <!--</a>--> <!--</div>--> <!--<p class="description wow slideInUp" data-wow-delay=".3s" style="text-align: left;">--> <!--● 大健康：健康管理-预防和监控；疾病治疗与社区服务设计<br />--> <!--● 大教育：幼儿和父母教育，职业教育与培训 居家服务：装修，养老，社区服务及管理设计<br />--> <!--● 居家服务：装修，养老，社区服务及管理设计--> <!--</p>--> <!--</li>--> <!--<li>--> <!--<div class="header wow slideInUp" data-wow-delay=".2s">--> <!--<a href="###">--> <!--<img src="__TMPL__/public/assets/picture/49176842_l.jpg" style="width: 1080px;height: 655px;" />--> <!--<p class="title">--> <!--大交通出行生态--> <!--</p>--> <!--<p class="subtitle">--> <!--SIIDI Research Directions--> <!--</p>--> <!--<div class="line1">--> <!--</div>--> <!--</a>--> <!--</div>--> <!--<p class="description wow slideInUp" data-wow-delay=".3s" style="text-align: left;">--> <!--● 出行数据和出行设计驱动的跨界城市规划<br />--> <!--● 交通工具的设计及功能提高，以及相关材料的研发<br />--> <!--● 交通管理及交通服务的设计与开发<br />--> <!--● 交通环境人性化设计<br />--> <!--● 出行服务设计--> <!--</p>--> <!--</li>--> <!--<li>--> <!--<div class="header wow slideInUp" data-wow-delay=".2s">--> <!--<a href="###">--> <!--<img src="__TMPL__/public/assets/picture/hero-home-lock.jpg" style="width: 1080px;height: 655px;" />--> <!--<p class="title">--> <!--高科技大数据服务--> <!--</p>--> <!--<p class="subtitle">--> <!--SIIDI Research Directions--> <!--</p>--> <!--<div class="line1">--> <!--</div>--> <!--</a>--> <!--</div>--> <!--<p class="description wow slideInUp" data-wow-delay=".3s" style="text-align: left;">--> <!--● 利用最新网络技术以及高科技来促成高效和高质的大交通出行生态和城镇都市品质生活内容<br />--> <!--● 智能城镇和产业规划与设计<br />--> <!--</p>--> <!--</li>--> <!--</ul>--> <!--</div>--> <!--</div>--> <!--</div>--> <!--</div>--> <div id="mcontact" class="module active"> <div class="content fw"> <div id="contactlist"> <div id="contactinfo" class="wow fadeInLeft" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;"> <div class="wow fadeInRight" style="float: left;visibility: visible;margin-top: -10px;/* color: #fff; */"> <h3 class="ellipsis" style="color: #fefefe;">
+      Shanghai International Institute of Design &amp; Innovation
+    </h3>
+  </div>
+          </block>
+        <block name="footer">
+    <div class="wow fadeInRight animated animated animated" style="float: left;visibility: visible;margin-left: 550px;margin-top: -112px">
+       <p class="ellipsis">
+      地址：上海市四平路1230号同济科技园A101-201
+    	</p> <p class="ellipsis">
+      邮编：200080
+    </p> <p class="ellipsis">
+      电话：+86 21 6510 1082
+    </p> <p class="ellipsis">
+      邮箱：info@siidi.cn
+    </p>
+  </div>
+        </block>
+  </div>
+
+<script>
+  $(function() {
+  var demo1 = $("#homeslider").slippry({
+    transition: 'fade',
+    useCSS: true,
+    captions: false,
+    speed: 1000,
+    pause: 3000,
+    auto: true,
+    preload: 'visible'
+  });
+  });
+  wow = new WOW(
+    {
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+  )
+  wow.init();
+
+  $('[name="bannerImg"]').on('click', function(){
+    var dataLink = $(this).attr('data-link');
+   if (dataLink != '' && dataLink != undefined){
+       location.href = dataLink;
+   }
+  });
+</script>
+</body>
+</html>

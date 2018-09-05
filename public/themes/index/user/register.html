@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户注册-链外网</title>
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="ThinkCMF">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<link rel="icon" href="/images/favicon.png" type="image/png">
+<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+<link href="__TMPL__/public/assets/css/default/bootstrap.min.css" rel="stylesheet">
+<link href="__TMPL__/public/assets/css/default/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="__TMPL__/public/assets/css/default/login.css" rel="stylesheet">
+<script type="text/javascript">
+    //全局变量
+    var GV = {
+        ROOT: "/",
+        WEB_ROOT: "/",
+        JS_ROOT: "static/js/"
+    };
+</script>
+<script src="__TMPL__/public/assets/js/default/jquery-1.10.2.min.js"></script>
+<script src="__TMPL__/public/assets/js/default/jquery-migrate-1.2.1.js"></script>
+<script src="__TMPL__/public/assets/js/default/wind.js"></script>
+</head>
+<body>
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>用户注册</h3>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form class="js-ajax-form" action="/user/register/doregister.html" method="post">
+                                    <div class="form-group">
+                                        <input type="text" name="username" placeholder="手机号" class="form-username form-control" id="js-mobile-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <div style="position: relative;">
+                                          <input type="text" name="captcha" placeholder="验证码" class="form-control captcha" style="width: 344px;float: left;margin-right: 0px">
+                                        <captcha height="36" width="160" font-size="20"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div style="position: relative;">
+                                            <input type="text" name="code" placeholder="手机验证码" class="form-control">
+                                            <a class="btn btn-success js-get-mobile-code"
+                                            style="width: 163px;position: absolute;top:0;right: 0;"
+                                            data-wait-msg="[second]秒后才能再次获取" data-mobile-input="#js-mobile-input"
+                                            data-url="{:url('user/VerificationCode/send',array('type'=>'register'))}"
+                                            data-init-second-left="60">获取手机验证码</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-password">Password</label>
+                                        <input type="password" name="password" placeholder="密码" class="form-password form-control" id="form-password">
+                                    </div>
+                                    <button class="btn btn-primary btn-block js-ajax-submit" type="submit" style="margin-left: 0px">确定</button>
+                                </form>
+
+                                <div class="form-group" style="text-align: center;">
+                                    <ul class="list-inline">
+                                    <li>已有账号?</li>
+                                    <li><a href="/user/login/index.html">点击此处登录</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="__TMPL__/public/assets/js/default/jquery.backstretch.min.js"></script>
+        <script src="__TMPL__/public/assets/js/default/login.js"></script>
+        <script src="__TMPL__/public/assets/js/default/frontend.js"></script>
+</body>
+</html>
